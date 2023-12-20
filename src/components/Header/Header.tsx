@@ -18,7 +18,7 @@ const Header = ({ showMenu, setShowMenu }: IProps) => {
           <LinkContainer to="/">
             <Navbar.Brand>
               <img src={logo} alt="logo" className="logo" />
-              X-Basket
+              Hell Basketball
             </Navbar.Brand>
           </LinkContainer>
 
