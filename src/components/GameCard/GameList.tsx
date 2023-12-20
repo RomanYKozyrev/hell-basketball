@@ -24,7 +24,7 @@ const GameList = ({ activeTeam, setActiveStats }: IProps) => {
   useEffect(() => {
     dispatch(getGames({ id: activeTeam, page }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page]);
+  }, [page, activeTeam]);
 
   useEffect(() => {
     setPage(1);
