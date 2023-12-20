@@ -1,0 +1,76 @@
+.pagination_block {
+  width: fit-content;
+  max-width: 452px;
+  margin: 15px auto 20px auto;
+  display: flex;
+  list-style: none;
+
+  &--page {
+    position: relative;
+    width: 40px;
+    padding: 11px 0;
+    text-align: center;
+    color: #737373;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+    border-right: none;
+    cursor: pointer;
+
+    &.current {
+      background-color: tomato;
+    }
+
+    &:hover {
+      color: tomato;
+      transition: 0.3s linear;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    &.current:hover {
+      color: #737373;
+    }
+
+    &.next_page,
+    &.prev_page {
+      background-image: url('../../assets/arrow-right.svg');
+    }
+
+    &.next_page:hover,
+    &.prev_page:hover {
+      background-image: url('../../assets/arrow-right-accent.svg');
+    }
+
+    &.last_page,
+    &.first_page {
+      background-image: url('../../assets/double-arrow.svg');
+    }
+
+    &.last_page:hover,
+    &.first_page:hover {
+      background-image: url('../../assets/double-arrow-accent.svg');
+    }
+
+    &.first_page,
+    &.prev_page {
+      transform: rotate(-180deg);
+      border-right: 1px solid #737373;
+      border-left: none;
+    }
+
+    &.first_page,
+    &.last_page {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+
+    &.last_page {
+      border-right: 1px solid #737373;
+    }
+  }
+}
